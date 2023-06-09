@@ -30,7 +30,7 @@ def make_proceedings_text(con, datelist, logfilepath, outdir):
 
 if __name__ == "__main__":
     con = sqlite3.connect(args.path)
-    asr_dates = list(pd.read_csv(args.date_file)["date"].unique())
+    asr_dates = list(pd.read_csv(args.date_file)["meeting_date"].unique())
     make_proceedings_text(con, asr_dates, args.log_file, args.out_dir)
     con.close()
 
