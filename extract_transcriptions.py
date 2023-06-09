@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("path", help="path to the database")
 parser.add_argument("-o", "--out_dir", help="Path to dir for output files")
 parser.add_argument("-l", "--log_file", help="Path to log file where dates with no proceedings will be written")
-parser.add_argument("-d", "--date_file", help="Path to csv file with the dates for the meetings to be extracted in a column named 'date'")
+parser.add_argument("-d", "--date_file", help="Path to csv file with the dates for the meetings to be extracted in a column named 'meeting_date'.")
 args = parser.parse_args()
 
 def make_proceedings_text(con, datelist, logfilepath, outdir):
